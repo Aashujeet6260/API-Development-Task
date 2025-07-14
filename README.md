@@ -147,20 +147,35 @@ Visit Swagger UI:
 
 ```json
 {
-  "formNumber": "BOGIE-2025-001",
-  "inspectionBy": "user_id_456",
-  "inspectionDate": "2025-07-03",
-  "bogieChecksheet": {
-    "axleGuide": "Worn"
-  },
   "bmbcChecksheet": {
-    "adjustingTube": "DAMAGED"
+    "adjustingTube": "GOOD",
+    "cylinderBody": "GOOD",
+    "pistonTrunnion": "GOOD",
+    "plungerSpring": "GOOD",
+    "tee bolt , hex nut ": "GOOD",
+    "dust excluder" : "GOOD",
+    "pawn and pawn spring":"GOOD"
+  },
+  "bogieChecksheet": {
+    "axleGuide": "Worn",
+    "bogieFrameCondition": "Good",
+    "bolster": "Good",
+    "bolsterSuspensionBracket": "Cracked",
+    "lowerSpringSeat": "Good",
+    "protective tube": "Cracked",
+    "anchor links": "GOOD",
+    "side bearer": "GOOD"
   },
   "bogieDetails": {
     "bogieNo": "BG1234",
     "dateOfIOH": "2025-07-01",
-    "deficitComponents": "None"
-  }
+    "deficitComponents": "None",
+    "incomingDivAndDate": "NR / 2025-06-25",
+    "makerYearBuilt": "RDSO/2018"
+  },
+  "formNumber": "BOGIE-2025-004",
+  "inspectionBy": "user_id_456",
+  "inspectionDate": "2025-07-03"
 }
 ```
 
