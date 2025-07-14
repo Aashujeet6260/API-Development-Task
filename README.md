@@ -5,6 +5,14 @@ It provides RESTful APIs for submitting and retrieving KPA form data such as **B
 
 ---
 
+
+📌 Assignment Specs
+
+Implements exactly 2 APIs.
+Follows provided Swagger: https://app.swaggerhub.com/apis/sarvasuvidhaen/kpa-form_data/1.0.0
+Hosted locally with FastAPI & PostgreSQL.
+Auth & environment config handled via .env.
+
 ## 📌 Project Specifications
 
 - **Framework:** FastAPI
@@ -18,15 +26,15 @@ This project follows the **OpenAPI spec** provided — strictly using **POST** f
 
 ---
 
-## ⚙️ Technologies Used
+✅ Tech Stack
 
-- Python 3.10+
-- FastAPI
-- SQLAlchemy
-- psycopg2-binary (PostgreSQL driver)
-- python-dotenv
-- Uvicorn
-- Postman
+Python 3.10+
+FastAPI
+SQLAlchemy
+PostgreSQL
+psycopg2-binary
+python-dotenv
+Uvicorn
 
 ---
 
@@ -61,30 +69,33 @@ This project follows the **OpenAPI spec** provided — strictly using **POST** f
 
 ---
 
+Implemented APIs
+1. POST /api/forms/bogie-checksheet — insert form data with unique formNumber.
+2. GET /api/forms/wheel-specifications — fetch forms using query params
+
+## ✅ How It Works
+
+POST: Validates JSON body, saves to DB, returns success response.
+GET: Uses filters from query params, returns matching rows.
+Swagger docs available at /docs.
+
 ## 🚀 Setup Instructions — Step by Step
 
 ### ✅ 1️⃣ Clone or download the project
 
-```bash
+```
 cd C:\Users\YourName\Desktop\kpa_api_assignment_real
 ```
 
 ### ✅ 2️⃣ Create & activate virtual environment
 
-```bash
+```
 python -m venv venv
-
 # Windows:
 venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
-```
 
 ### ✅ 3️⃣ Install required packages
-
-```bash
 pip install -r requirements.txt
-```
 
 ### ✅ 4️⃣ Create `.env` file
 
@@ -132,8 +143,6 @@ Visit Swagger UI:
 
 ---
 
-## ✅ Example Requests
-
 ### ➡️ POST `/api/forms/bogie-checksheet`
 
 ```json
@@ -155,7 +164,7 @@ Visit Swagger UI:
 }
 ```
 
-### ➡️ Example Response
+### ➡️ Response in the POSTMAN
 
 ```json
 {
@@ -189,10 +198,20 @@ Visit Swagger UI:
 
 ---
 
+✅ Deliverables
+
+1.Source code zip
+2.Postman collection export
+3.README
+4.Screen recording explaining setup & test steps
+
 ## ✅ Author
 
 Assignment completed per PDF specifications — no external resources used.\
 Built with **FastAPI + PostgreSQL + Swagger + Postman**.
+No extra libraries used
+Includes input validation & Swagger docs automatically
+
 
 **Good luck and happy coding! 🚀**
 
