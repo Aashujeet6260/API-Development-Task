@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "874ca150-11c7-4590-8739-456edd95519a",
+		"name": "KPA_form data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27027867",
+		"_collection_link": "https://www.postman.com/dark-station-230171/workspace/aashu/collection/27027867-874ca150-11c7-4590-8739-456edd95519a?action=share&source=collection_link&creator=27027867"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "forms",
+					"item": [
+						{
+							"name": "bogie-checksheet",
+							"item": [
+								{
+									"name": "https://railops-uat-api.biputri.com/api/forms/bogie-checksheet",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"bmbcChecksheet\": {\n    \"adjustingTube\": \"GOOD\",\n    \"cylinderBody\": \"GOOD\",\n    \"pistonTrunnion\": \"GOOD\",\n    \"plungerSpring\": \"GOOD\",\n    \"tee bolt , hex nut \": \"GOOD\",\n    \"dust excluder\" : \"GOOD\",\n    \"pawn and pawn spring\":\"GOOD\"\n  },\n  \"bogieChecksheet\": {\n    \"axleGuide\": \"Worn\",\n    \"bogieFrameCondition\": \"Good\",\n    \"bolster\": \"Good\",\n    \"bolsterSuspensionBracket\": \"Cracked\",\n    \"lowerSpringSeat\": \"Good\",\n    \"protective tube\": \"Cracked\",\n    \"anchor links\": \"GOOD\",\n    \"side bearer\": \"GOOD\"\n  },\n  \"bogieDetails\": {\n    \"bogieNo\": \"BG1234\",\n    \"dateOfIOH\": \"2025-07-01\",\n    \"deficitComponents\": \"None\",\n    \"incomingDivAndDate\": \"NR / 2025-06-25\",\n    \"makerYearBuilt\": \"RDSO/2018\"\n  },\n  \"formNumber\": \"BOGIE-2025-003\",\n  \"inspectionBy\": \"user_id_456\",\n  \"inspectionDate\": \"2025-07-03\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/forms/bogie-checksheet\n",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"forms",
+												"bogie-checksheet\n"
+											]
+										},
+										"description": "https://railops-uat-api.biputri.com/api/forms/bogie-checksheet"
+									},
+									"response": [
+										{
+											"name": "201 Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"bmbcChecksheet\": {\n    \"adjustingTube\": \"DAMAGED\",\n    \"cylinderBody\": \"WORN OUT\",\n    \"pistonTrunnion\": \"GOOD\",\n    \"plungerSpring\": \"GOOD\"\n  },\n  \"bogieChecksheet\": {\n    \"axleGuide\": \"Worn\",\n    \"bogieFrameCondition\": \"Good\",\n    \"bolster\": \"Good\",\n    \"bolsterSuspensionBracket\": \"Cracked\",\n    \"lowerSpringSeat\": \"Good\"\n  },\n  \"bogieDetails\": {\n    \"bogieNo\": \"BG1234\",\n    \"dateOfIOH\": \"2025-07-01\",\n    \"deficitComponents\": \"None\",\n    \"incomingDivAndDate\": \"NR / 2025-06-25\",\n    \"makerYearBuilt\": \"RDSO/2018\"\n  },\n  \"formNumber\": \"BOGIE-2025-001\",\n  \"inspectionBy\": \"user_id_456\",\n  \"inspectionDate\": \"2025-07-03\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/forms/bogie-checksheet",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"forms",
+														"bogie-checksheet"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"formNumber\": \"BOGIE-2025-001\",\n    \"inspectionBy\": \"user_id_456\",\n    \"inspectionDate\": \"2025-07-03\",\n    \"status\": \"Saved\"\n  },\n  \"message\": \"Bogie checksheet submitted successfully.\",\n  \"success\": true\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "wheel-specifications",
+							"item": [
+								{
+									"name": "https://railops-uat-api.biputri.com/api/forms/wheel-specifications (GET with filters)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/forms/wheel-specifications?formNumber=WHEEL-2025-001&submittedBy=user_id_123&submittedDate=2025-07-03\n",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"forms",
+												"wheel-specifications"
+											],
+											"query": [
+												{
+													"key": "formNumber",
+													"value": "WHEEL-2025-001"
+												},
+												{
+													"key": "submittedBy",
+													"value": "user_id_123"
+												},
+												{
+													"key": "submittedDate",
+													"value": "2025-07-03\n"
+												}
+											]
+										},
+										"description": "https://railops-uat-api.biputri.com/api/forms/wheel-specifications (GET with filters)"
+									},
+									"response": [
+										{
+											"name": "200 OK - Filtered Results",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/forms/wheel-specifications?formNumber=consectetur est pariatur&submittedBy=consectetur est pariatur&submittedDate=consectetur est pariatur",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"forms",
+														"wheel-specifications"
+													],
+													"query": [
+														{
+															"key": "formNumber",
+															"value": "consectetur est pariatur"
+														},
+														{
+															"key": "submittedBy",
+															"value": "consectetur est pariatur"
+														},
+														{
+															"key": "submittedDate",
+															"value": "consectetur est pariatur"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": [\n    {\n      \"fields\": {\n        \"condemningDia\": \"825 (800-900)\",\n        \"lastShopIssueSize\": \"837 (800-900)\",\n        \"treadDiameterNew\": \"915 (900-1000)\",\n        \"wheelGauge\": \"1600 (+2,-1)\"\n      },\n      \"formNumber\": \"WHEEL-2025-001\",\n      \"submittedBy\": \"user_id_123\",\n      \"submittedDate\": \"2025-07-03\"\n    }\n  ],\n  \"message\": \"Filtered wheel specification forms fetched successfully.\",\n  \"success\": true\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://railops-uat-api.biputri.com"
+		}
+	]
+}
